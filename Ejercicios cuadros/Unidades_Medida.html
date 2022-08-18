@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Unidades de Medida</title>
+
+        <style>
+            *{
+                color: #525252;
+            }
+            body{
+                background-color: #B1D8B7;
+            }
+            .text{
+                background-color: #B6E2D3;
+                border-radius: 8px;
+                text-decoration: underline;
+                height: 20px;
+                text-align: center;
+                font-size: 100%;
+                width: 120px;
+            }
+            .button{
+                text-decoration: none;
+                padding: 5px;
+                font-weight: 80;
+                font-size: 15px;
+                color: black;
+                background-color: #45B08C;
+                border-radius: 8px;
+                border: 2px solid #1E4D3D;
+                transition-duration: 0.2s;
+            }
+            .button:hover{
+                background-color: #1E4D3D;
+                color: white;
+            }
+        </style>
+
+        <script language="Javascript">
+
+            function Dist(){
+                m = document.form1.m.value
+
+                if(m==''){
+                document.form1.cm.value = (' ')
+                document.form1.mm.value = (' ')
+                document.form1.dm.value = (' ')
+                document.form1.Dm.value = (' ')
+                document.form1.Km.value = (' ')
+                document.form1.yr.value = (' ')
+                document.form1.pie.value = (' ')
+                document.form1.pg.value = (' ')
+                }
+                else{
+                m = document.form1.m.value
+                document.form1.cm.value = (m * 100).toFixed(0)
+                document.form1.mm.value = (m * 1000).toFixed(0)
+                document.form1.dm.value = (m * 10).toFixed(1)
+                document.form1.Dm.value = (m * 0.1).toFixed(2)
+                document.form1.Km.value = (m * 0.001).toFixed(2)
+                document.form1.yr.value = (m * 1.09361).toFixed(2)
+                document.form1.pie.value = (m * 3.28084).toFixed(2)
+                document.form1.pg.value = (m * 39.3701).toFixed(2)
+                }
+                
+            }
+
+            function Peso(){
+                Kg = document.form1.Kg.value
+
+                if(Kg==''){
+                document.form1.lb.value = (' ')
+                document.form1.ab.value = (' ')
+                document.form1.tn.value = (' ')
+                document.form1.oz.value = (' ')
+                document.form1.gr.value = (' ')
+                }
+                else{
+                document.form1.lb.value = (Kg * 2,20462).toFixed(2)
+                document.form1.ab.value = (Kg * 11.339).toFixed(2)
+                document.form1.tn.value = (Kg * 0.001).toFixed(3)
+                document.form1.oz.value = (Kg * 35.274).toFixed(2)
+                document.form1.gr.value = (Kg * 1000).toFixed(0)  
+                }
+            }
+
+            function Liqui(){
+                lt = document.form1.l.value
+
+                if(lt==''){
+                document.form1.ml.value = (' ')
+                document.form1.Hl.value = (' ')
+                document.form1.Dl.value = (' ')
+                }
+                else{
+                document.form1.ml.value = (lt * 1000).toFixed(0)
+                document.form1.Hl.value = (lt * 0.01).toFixed(2)
+                document.form1.Dl.value = (lt * 0.1).toFixed(2)
+                }
+                
+            }
+
+        </script>
+    </head>
+    <body>
+        <center><br><br><br><br><br><br><form name="form1"> <font size="4" face=Helvetica> 
+            <table border="0" cellspacing="0" width=1300px>
+                <tr height=40px>
+                    <th colspan="11" bgcolor=#21B6A8> <font size="6" face=Helvetica> CONVERSOR UNIDADES DE MEDIDA </font> </th>
+                </tr>
+                <tr height=40px>
+                    <th width=50px bgcolor=#A3EBB1></th>
+                    <th width=200px bgcolor=#A3EBB1></th>
+                    <th width=50px bgcolor=#A3EBB1></th>
+                    <th width=200px bgcolor=#A3EBB1></th>
+                    <th width=200px bgcolor=#A3EBB1></th>
+                    <th width=50px bgcolor=#A3EBB1></th>
+                    <th width=200px bgcolor=#9ACD32></th>
+                    <th width=50px bgcolor=#9ACD32></th>
+                    <th width=200px bgcolor=#9ACD32></th>
+                    <th width=200px bgcolor=#9ACD32></th>
+                    <th width=50px bgcolor=#9ACD32></th>
+                </tr>
+                <tr height=40px>
+                    <th bgcolor=#A3EBB1></th>
+                    <th bgcolor=#A3EBB1></th>
+                    <th bgcolor=#A3EBB1></th>
+                    <th bgcolor=#A3EBB1>Centimetros</th>
+                    <th bgcolor=#A3EBB1> <input type="number" name="cm" class="text"> </th>
+                    <th bgcolor=#A3EBB1></th>
+                    <th bgcolor=#9ACD32></th>
+                    <th bgcolor=#9ACD32></th>
+                    <th bgcolor=#9ACD32>  Libras </th>
+                    <th bgcolor=#9ACD32> <input type="number" name="lb" class="text"> </th>
+                    <th bgcolor=#9ACD32></th>
+                </tr>
+                <tr height=40px>
+                    <th bgcolor=#A3EBB1></th>
+                    <th bgcolor=#A3EBB1 rowspan="2"> Metros </th>
+                    <th bgcolor=#A3EBB1></th>
+                    <th bgcolor=#A3EBB1>Milimetros</th>
+                    <th bgcolor=#A3EBB1> <input type="number" name="mm" class="text"> </th>
+                    <th bgcolor=#A3EBB1></th>
+                    <th bgcolor=#9ACD32  rowspan="2"> Kilogramos </th>
+                    <th bgcolor=#9ACD32></th>
+                    <th bgcolor=#9ACD32>  Arrobas </th>
+                    <th bgcolor=#9ACD32> <input type="number" name="ab" class="text"> </th>
+                    <th bgcolor=#9ACD32></th>
+                </tr>
+                <tr height=40px>
+                    <th bgcolor=#A3EBB1></th>
+                    <th bgcolor=#A3EBB1></th>
+                    <th bgcolor=#A3EBB1>Decimetros</th>
+                    <th bgcolor=#A3EBB1> <input type="number" name="dm" class="text"> </th>
+                    <th bgcolor=#A3EBB1></th>
+                    <th bgcolor=#9ACD32></th>
+                    <th bgcolor=#9ACD32> Toneladas </th>
+                    <th bgcolor=#9ACD32> <input type="number" name="tn" class="text"> </th>
+                    <th bgcolor=#9ACD32></th>
+                </tr>
+                <tr height=40px>
+                    <th bgcolor=#A3EBB1></th>
+                    <th bgcolor=#A3EBB1> <input type="number" name="m" class="text"> </th>
+                    <th bgcolor=#A3EBB1></th>
+                    <th bgcolor=#A3EBB1>Decametros</th>
+                    <th bgcolor=#A3EBB1> <input type="number" name="Dm" class="text"> </th>
+                    <th bgcolor=#A3EBB1></th>
+                    <th bgcolor=#9ACD32> <input type="number" name="Kg" class="text"> </th>
+                    <th bgcolor=#9ACD32></th>
+                    <th bgcolor=#9ACD32> Onzas </th>
+                    <th bgcolor=#9ACD32> <input type="number" name="oz" class="text"> </th>
+                    <th bgcolor=#9ACD32></th>
+                </tr>
+                <tr height=40px>
+                    <th bgcolor=#A3EBB1></th>
+                    <th bgcolor=#A3EBB1></th>
+                    <th bgcolor=#A3EBB1></th>
+                    <th bgcolor=#A3EBB1>Kilometros</th>
+                    <th bgcolor=#A3EBB1> <input type="number" name="Km" class="text"> </th>
+                    <th bgcolor=#A3EBB1></th>
+                    <th bgcolor=#9ACD32></th>
+                    <th bgcolor=#9ACD32></th>
+                    <th bgcolor=#9ACD32> Gramos </th>
+                    <th bgcolor=#9ACD32> <input type="number" name="gr" class="text"> </th>
+                    <th bgcolor=#9ACD32></th>
+                </tr>
+                <tr height=20px>
+                    <th bgcolor=#A3EBB1></th>
+                    <th bgcolor=#A3EBB1></th>
+                    <th bgcolor=#A3EBB1></th>
+                    <th bgcolor=#A3EBB1></th>
+                    <th bgcolor=#A3EBB1></th>
+                    <th bgcolor=#A3EBB1></th>
+                    <th bgcolor=#9ACD32></th>
+                    <th bgcolor=#9ACD32></th>
+                    <th bgcolor=#9ACD32></th>
+                    <th bgcolor=#9ACD32></th>
+                    <th bgcolor=#9ACD32></th>
+                </tr>
+                <tr height=20px>
+                    <th bgcolor=#A3EBB1></th>
+                    <th bgcolor=#A3EBB1></th>
+                    <th bgcolor=#A3EBB1></th>
+                    <th bgcolor=#A3EBB1></th>
+                    <th bgcolor=#A3EBB1></th>
+                    <th bgcolor=#A3EBB1></th>
+                    <th bgcolor=#18A558></th>
+                    <th bgcolor=#18A558></th>
+                    <th bgcolor=#18A558></th>
+                    <th bgcolor=#18A558></th>
+                    <th bgcolor=#18A558></th>
+                </tr>
+                <tr height=40px>
+                    <th bgcolor=#A3EBB1></th>
+                    <th bgcolor=#A3EBB1></th>
+                    <th bgcolor=#A3EBB1></th>
+                    <th bgcolor=#A3EBB1>Yardas</th>
+                    <th bgcolor=#A3EBB1> <input type="number" name="yr" class="text"> </th>
+                    <th bgcolor=#A3EBB1></th>
+                    <th bgcolor=#18A558 rowspan="2"> Litros </th>
+                    <th bgcolor=#18A558></th>
+                    <th bgcolor=#18A558> Mililitros </th>
+                    <th bgcolor=#18A558> <input type="number" name="ml" class="text"> </th>
+                    <th bgcolor=#18A558></th>
+                </tr>
+                <tr height=40px>
+                    <th bgcolor=#A3EBB1></th>
+                    <th bgcolor=#A3EBB1></th>
+                    <th bgcolor=#A3EBB1></th>
+                    <th bgcolor=#A3EBB1> Pulgadas </th>
+                    <th bgcolor=#A3EBB1> <input type="number" name="pg" class="text"> </th>
+                    <th bgcolor=#A3EBB1></th>
+                    <th bgcolor=#18A558></th>
+                    <th bgcolor=#18A558> Hectolitros </th>
+                    <th bgcolor=#18A558> <input type="number" name="Hl" class="text"> </th>
+                    <th bgcolor=#18A558></th>
+                </tr>
+                <tr height=40px>
+                    <th  bgcolor=#A3EBB1 ></th>
+                    <th  bgcolor=#A3EBB1 ></th>
+                    <th  bgcolor=#A3EBB1 ></th>
+                    <th  bgcolor=#A3EBB1 >Pie</th>
+                    <th  bgcolor=#A3EBB1 > <input type="number" name="pie" class="text"> </th>
+                    <th  bgcolor=#A3EBB1 ></th>
+                    <th bgcolor=#18A558> <input type="number" name="l" class="text"> </th>
+                    <th bgcolor=#18A558></th>
+                    <th bgcolor=#18A558>Decalitros </th>
+                    <th bgcolor=#18A558> <input type="number" name="Dl" class="text"> </th>
+                    <th bgcolor=#18A558></th>
+                </tr>
+                <tr height=20px>
+                    <th bgcolor=#A3EBB1></th>
+                    <th bgcolor=#A3EBB1></th>
+                    <th bgcolor=#A3EBB1></th>
+                    <th bgcolor=#A3EBB1></th>
+                    <th bgcolor=#A3EBB1></th>
+                    <th bgcolor=#A3EBB1></th>
+                    <th bgcolor=#18A558></th>
+                    <th bgcolor=#18A558></th>
+                    <th bgcolor=#18A558></th>
+                    <th bgcolor=#18A558></th>
+                    <th bgcolor=#18A558></th>
+                </tr>
+                <tr height=40px>
+                    <th bgcolor=#A3EBB1></th>
+                    <th bgcolor=#A3EBB1></th>
+                    <th bgcolor=#A3EBB1></th>
+                    <th bgcolor=#A3EBB1></th>
+                    <th bgcolor=#A3EBB1></th>
+                    <th bgcolor=#A3EBB1></th>
+                    <th bgcolor=#18A558></th>
+                    <th bgcolor=#18A558></th>
+                    <th bgcolor=#18A558></th>
+                    <th bgcolor=#18A558></th>
+                    <th bgcolor=#18A558></th>
+                </tr>
+                <tr height=20px>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr height=20px>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th> <input type="button" class="button" value="Convertir Unidades" onclick="Dist();Peso();Liqui()"> </th>
+                    <th></th>
+                    <th> <input type="reset" class="button"> </th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                
+                
+            </table></form>
+    </body>
+</html>

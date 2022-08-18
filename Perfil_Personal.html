@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Perfil Personal</title>
+
+        <style>
+            body{
+                background-color: #C8F4F9;
+            }
+            .table2 {                   
+            border-bottom-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
+            border-width: 20px;
+            border-bottom: 10;
+            border-top: 10;
+            border-left: 10;
+            border-right: 10;
+            border-color:#059DC0;
+            background-color: ##6AF2F0 ;
+            }
+            .c4{
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 0px;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 0px;
+            background-color: #04D4F0; 
+            }
+            .c6{
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 15px;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 15px;
+            background-color: #04D4F0; 
+            }
+        </style>
+
+        <script language="Javascript">
+            /* Creal Perfil con los datos personales */
+
+            function concat(){
+                nombre = document.f1.nom.value
+                apelli = document.f1.ape.value
+                edad = (parseInt(document.f1.año.value) - 2021) * -1
+                estatu = document.f1.est.value
+                sexo = document.f1.sex.value
+                country = document.f1.pais.value
+                sangre = document.f1.rh.value + document.f1.signo.value
+
+                document.f1.perfil.value = 'Mi nombre es ' + nombre + ' ' + apelli + ' . Tengo ' + edad + ' años. Mi estatura es de ' + estatu + ' metros. Mi Sexo es ' + sexo + '. Nací en ' + country + ' y mi RH es ' + sangre
+            }
+            
+        </script>
+
+    </head>
+    <body>
+        <center><br><br><br><br>
+        <form name="f1">
+            <table width=500px class="table2" name= "table" cellspacing=0 bordercolor=#F1C83A border=0>
+                <tr height=10px>
+                    <th colspan="3"></th>
+                </tr>
+                <tr height=60px>
+                    <th colspan="2" width=250px><font size=5> -- PERFIL PERSONAL -- </font></th>
+                </tr>
+                <tr height=20px>
+                    <th colspan="2">Ingrese Sus datos personales</th>
+                </tr>
+                <tr height=30px>
+                    <th colspan="2" width=250px></th>
+                </tr>
+                <tr height=10px>
+                    <th colspan="2"></th>
+                </tr>
+                <tr height=50px>
+                    <th class=c4><font size=4>Nombre (s)</font></th>
+                    <th class=c6><font size=4> <input type="text" size="20" name="nom"> </font></th>
+                </tr>
+                <tr height=5px>
+                    <th colspan="2"></th>
+                </tr>
+                <tr height=50px>
+                    <th class=c4><font size=4>Apellido (s)</font></th>
+                    <th class=c6><font size=4> <input type="text" size="20" name="ape"> </font></th>
+                </tr>
+                <tr height=5px>
+                    <th colspan="2"></th>
+                </tr>
+                <tr height=50px>
+                    <th class=c4><font size=4>Año de Nacimiento</font></th>
+                    <th class=c6><font size=4> <input type="number" size="40" name="año"> </font></th>
+                </tr>
+                <tr height=5px>
+                    <th colspan="2"></th>
+                </tr>
+                <tr height=50px>
+                    <th class=c4><font size=4>Estatura</font></th>
+                    <th class=c6><font size=4> <input type="number" size="40" name="est"> </font></th>
+                </tr>
+                <tr height=5px>
+                    <th colspan="2"></th>
+                </tr>
+                <tr height=50px>
+                    <th class=c4><font size=4>Sexo</font></th>
+                    <th class=c6> 
+                        <select name="sex">
+                            <option> Selecciona </option>
+                            <option> Masculino </option>
+                            <option> Femenino </option>
+                            <option> Otro </option>
+                        </select>
+                    </th>
+                </tr>
+                <tr height=5px>
+                    <th colspan="2"></th>
+                </tr>
+                <tr height=50px>
+                    <th class=c4><font size=4>País</font></th>
+                    <th class=c6> 
+                        <select name="pais">
+                            <option> Selecciona </option>
+                            <option> Argentina </option>
+                            <option> Colombia </option>
+                            <option> Perú </option>
+                            <option> Otro </option>
+                        </select>
+                    </th>
+                </tr>
+                <tr height=5px>
+                    <th colspan="2"></th>
+                </tr>
+                <tr height=50px>
+                    <th class=c4><font size=4>RH</font></th>
+                    <th class=c6> 
+                        <select name="rh">
+                            <option> Selecciona </option>
+                            <option> A </option>
+                            <option> B </option>
+                            <option> O </option>
+                            <option> AB </option>
+                        </select>
+                        <select name="signo">
+                            <option> Selecciona </option>
+                            <option> + </option>
+                            <option> - </option>
+                        </select>
+                    </th>
+                </tr>
+                <tr height=5px>
+                    <th colspan="2"></th>
+                </tr>
+                <tr height=40px>
+                    <th width=250px> <input type="button" value="Ver Perfil" onclick="concat()"> </th>
+                    <th width=250px><input type="reset" name="borrar"></th>
+                </tr>
+                <tr height=50px>
+                    <th class=c4 colspan="2"><font size=4>PERFIL</font></th>
+                </tr>
+                <tr height=5px>
+                    <th colspan="2"></th>
+                </tr>
+                <tr height=150px>
+                    <th class=c4 colspan="2"><font size=4> <textarea name="perfil" cols=60 rows="5"></textarea> </font></th>
+                </tr>                
+            </table>
+        </form>
+    </body>
+</html>

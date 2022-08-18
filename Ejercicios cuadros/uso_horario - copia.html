@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{
+                color: #525252;
+            }
+            body{
+                background-color: #E4D4C8;
+            }
+            .text1{
+                background-color: #e0cdbe;
+                border: 5px;
+                border-radius: 15px;
+                text-decoration: underline;
+                height: 20px;
+                text-align: center;
+            }
+            .text2{
+                background-color: #B9B7BD;
+                border: 0px;
+                border-radius: 15px;
+                height: 20px;
+                text-align: center;
+            }
+            .button{
+                text-decoration: none;
+                padding: 5px;
+                font-weight: 80;
+                font-size: 15px;
+                color: #E4D4C8;
+                background-color: #D19374;
+                border-radius: 8px;
+                border: 2px solid #693B23;
+                transition-duration: 0.2s;
+            }
+            .button:hover{
+                background-color: #DCAE96;
+                color: white;
+            }
+        </style>
+        <title>Huso Horario</title>
+
+        <script language="Javascript">
+
+           function Horarios(){
+
+                hora = document.form1.horas.value
+                mins = document.form1.mins.value
+
+                if(hora >= 24 || hora < 0 || mins >= 60 || mins < 0){
+                    location.reload();
+
+                    alert('Hora o Minutos ingresados no son válidos, por favor intente nuevamente')
+                }
+                else{}
+
+            }
+
+            function Paris(){
+                
+                paris = parseInt(hora)+7
+
+                if (paris <= 9){
+                    document.form1.texto1.value = '0'+paris+':'+mins+' Horas'
+                }
+                else if(paris < 24){
+                    document.form1.texto1.value = paris+':'+mins+' Horas'
+                }
+                else{
+                    paris = paris - 24
+
+                    if (paris <= 9){
+                    document.form1.texto1.value = '0'+paris+':'+mins+' Horas'
+                    }
+                    else if(paris < 24){
+                    document.form1.texto1.value = paris+':'+mins+' Horas'
+                        }
+                    }
+                }
+
+            function Beijing(){
+                
+                beijing = parseInt(hora)+13
+
+                if (beijing <= 9){
+                    document.form1.texto2.value = '0'+beijing+':'+mins+' Horas'
+                }
+                else if(beijing < 24){
+                    document.form1.texto2.value = beijing+':'+mins+' Horas'
+                }
+                else{
+                    beijing = beijing - 24
+
+                    if (beijing <= 9){
+                    document.form1.texto2.value = '0'+beijing+':'+mins+' Horas'
+                    }
+                    else if(beijing < 24){
+                    document.form1.texto2.value = beijing+':'+mins+' Horas'
+                        }
+                    }
+                }
+
+            function Cabo(){
+                
+                cabo = parseInt(hora)+7
+
+                if (cabo <= 9){
+                    document.form1.texto3.value = '0'+cabo+':'+mins+' Horas'
+                }
+                else if(cabo < 24){
+                    document.form1.texto3.value = cabo+':'+mins+' Horas'
+                }
+                else{
+                    cabo = cabo - 24
+
+                    if (cabo <= 9){
+                    document.form1.texto3.value = '0'+cabo+':'+mins+' Horas'
+                    }
+                    else if(cabo < 24){
+                    document.form1.texto3.value = cabo+':'+mins+' Horas'
+                    }
+                }
+            }
+
+            function Sanpt(){
+                
+                sanpt = parseInt(hora)+8
+
+                if (sanpt <= 9){
+                    document.form1.texto4.value = '0'+sanpt+':'+mins+' Horas'
+                }
+                else if(sanpt < 24){
+                    document.form1.texto4.value = sanpt+':'+mins+' Horas'
+                }
+                else{
+                    sanpt = sanpt - 24
+
+                    if (sanpt <= 9){
+                    document.form1.texto4.value = '0'+sanpt+':'+mins+' Horas'
+                    }
+                    else if(sanpt < 24){
+                    document.form1.texto4.value = sanpt+':'+mins+' Horas'
+                    }
+                }
+            }
+
+            function Mont(){
+                
+                mont = parseInt(hora)+1
+
+                if (mont <= 9){
+                    document.form1.texto5.value = '0'+mont+':'+mins+' Horas'
+                }
+                else if(mont < 24){
+                    document.form1.texto5.value = mont+':'+mins+' Horas'
+                }
+                else{
+                    mont = mont - 24
+
+                    if (mont <= 9){
+                    document.form1.texto5.value = '0'+mont+':'+mins+' Horas'
+                    }
+                    else if(mont < 24){
+                    document.form1.texto5.value = mont+':'+mins+' Horas'
+                    }
+                }
+            }
+
+            function Belo(){
+                
+                belo = parseInt(hora)+2
+
+                if (belo <= 9){
+                    document.form1.texto6.value = '0'+belo+':'+mins+' Horas'
+                }
+                else if(belo < 24){
+                    document.form1.texto6.value = belo+':'+mins+' Horas'
+                }
+                else{
+                    belo = belo - 24
+
+                    if (belo <= 9){
+                    document.form1.texto6.value = '0'+belo+':'+mins+' Horas'
+                    }
+                    else if(belo < 24){
+                    document.form1.texto6.value = belo+':'+mins+' Horas'
+                    }
+                }
+            }
+
+            function Seat(){
+                
+                seat = parseInt(hora)+22
+
+                if (seat <= 9){
+                    document.form1.texto7.value = '0'+seat+':'+mins+' Horas'
+                }
+                else if(seat < 24){
+                    document.form1.texto7.value = seat+':'+mins+' Horas'
+                }
+                else{
+                    seat = seat - 24
+
+                    if (seat <= 9){
+                    document.form1.texto7.value = '0'+seat+':'+mins+' Horas'
+                    }
+                    else if(seat < 24){
+                    document.form1.texto7.value = seat+':'+mins+' Horas'
+                    }
+                }
+            }
+
+            function Osaka(){
+                
+                osaka = parseInt(hora)+14
+
+                if (osaka <= 9){
+                    document.form1.texto8.value = '0'+osaka+':'+mins+' Horas'
+                }
+                else if(osaka < 24){
+                    document.form1.texto8.value = osaka+':'+mins+' Horas'
+                }
+                else{
+                    osaka = osaka - 24
+
+                    if (osaka <= 9){
+                    document.form1.texto8.value = '0'+osaka+':'+mins+' Horas'
+                    }
+                    else if(osaka < 24){
+                    document.form1.texto8.value = osaka+':'+mins+' Horas'
+                    }
+                }
+            }
+
+            function Melbo(){
+                
+                melbo = parseInt(hora)+15
+
+                if (melbo <= 9){
+                    document.form1.texto9.value = '0'+melbo+':'+mins+' Horas'
+                }
+                else if(melbo < 24){
+                    document.form1.texto9.value = melbo+':'+mins+' Horas'
+                }
+                else{
+                    melbo = melbo - 24
+
+                    if (melbo <= 9){
+                    document.form1.texto9.value = '0'+melbo+':'+mins+' Horas'
+                    }
+                    else if(melbo < 24){
+                    document.form1.texto9.value = melbo+':'+mins+' Horas'
+                    }
+                }
+            }
+
+            function Fiji(){
+                
+                fiji = parseInt(hora)+17
+
+                if (fiji <= 9){
+                    document.form1.textol0.value = '0'+fiji+':'+mins+' Horas'
+                }
+                else if(fiji < 24){
+                    document.form1.textol0.value = fiji+':'+mins+' Horas'
+                }
+                else{
+                    fiji = fiji - 24
+
+                    if (fiji <= 9){
+                    document.form1.textol0.value = '0'+fiji+':'+mins+' Horas'
+                    }
+                    else if(fiji < 24){
+                    document.form1.textol0.value = fiji+':'+mins+' Horas'
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        
+        <center><br><br><br><br><br><br><form name="form1"> <font size="4" face=Helvetica> 
+            <table border="0" cellspacing="0" width=1100px>
+                <tr height=50>
+                    <th colspan="6"> <font size="6" face=Helvetica> HUSO HORARIO </font></th>
+                </tr>
+                <tr height=50>
+                    <th colspan="6"> <font size="6" face=Helvetica></font></th>
+                </tr>
+                <tr height=30>
+                    <th width=100px></th>
+                    <th width=300px></th>
+                    <th width=100px></th>
+                    <th width=300px></th>
+                    <th width=200px></th>
+                    <th width=100px></th>
+                </tr>
+                <tr height=30>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th>Paris (Francia)</th>
+                    <th> <input type="text" name="texto1" class="text1"> </th>
+                    <th></th>
+                </tr>
+                <tr height=30>
+                    <th></th>
+                    <th rowspan="2">Por favor ingrese el la hora en formato 24 horas</th>
+                    <th></th>
+                    <th>Beijing (China)</th>
+                    <th> <input type="text" name="texto2" class="text1"> </th>
+                    <th></th>
+                </tr>
+                <tr height=30>
+                    <th></th>
+                    <th></th>
+                    <th>Ciudad del Cabo (Sudafrica)</th>
+                    <th> <input type="text" name="texto3" class="text1"> </th>
+                    <th></th>
+                </tr>
+                <tr height=30>
+                    <th></th>
+                    <th>Horario Bogota</th>
+                    <th></th>
+                    <th>San Petersburgo (Rusia)</th>
+                    <th> <input type="text" name="texto4" class="text1"> </th>
+                    <th></th>
+                </tr>
+                <tr height=30>
+                    <th></th>
+                    <th> Hora <input type="text" size="8" name="horas" class="text2"> </th>
+                    <th></th>
+                    <th>Montreal (Canada)</th>
+                    <th> <input type="text" name="texto5" class="text1"> </th>
+                    <th></th>
+                </tr>
+                <tr height=30>
+                    <th></th>
+                    <th>  Mins <input type="text" size="8" name="mins" class="text2"> </th>
+                    <th></th>
+                    <th>Belo Horizonte (Brasil)</th>
+                    <th> <input type="text" name="texto6" class="text1"> </th>
+                    <th></th>
+                </tr>
+                <tr height=30>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th>Seattle (Estados Unidos)</th>
+                    <th> <input type="text" name="texto7" class="text1"> </th>
+                    <th></th>
+                </tr>
+                <tr height=30>
+                    <th></th>
+                    <th> <input type="button" name="calc" value="Ver Horarios" class="button" onclick="Horarios();Paris();Beijing();Cabo();Sanpt();Mont();Belo();Seat();Osaka();Melbo();Fiji()"> <input type="reset" name="reset" class="button"> </th>
+                    <th></th>
+                    <th>Osaka (Japon)</th>
+                    <th> <input type="text" name="texto8" class="text1"> </th>
+                    <th></th>
+                </tr>
+                <tr height=30>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th>Melbourne (Australia)</th>
+                    <th> <input type="text" name="texto9" class="text1"> </th>
+                    <th></th>
+                </tr>
+                <tr height=30>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th>Islas Fiji (Oceania)</th>
+                    <th> <input type="text" name="textol0" class="text1"> </th>
+                    <th></th>
+                </tr>
+                <tr height=30>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </table></form>
+    </body>
+</html>

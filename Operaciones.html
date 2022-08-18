@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Operaciones Aritmeticas</title>
+
+        <style>
+            body{
+                background-color: #E4D4C8;
+            }
+            .table2 {                   
+            border-bottom-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
+            border-width: 10px;
+            border-bottom: 10;
+            border-top: 10;
+            border-left: 10;
+            border-right: 10;
+            border-color:#F1C83A;
+            background-color: #EAE8DD ;
+            }
+
+            .tit{
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            background-color: #E4D4C8;
+            }
+            .c1{
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 0px;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 0px;
+            background-color: #D0B49F; 
+            }
+            .c2{
+            background-color: #D0B49F;    
+            }
+            .c3{
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 15px;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 15px;
+            background-color: #D0B49F; 
+            }
+            .c4{
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 0px;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 0px;
+            background-color: #EECE88; 
+            }
+            .c5{
+            background-color: #EECE88;    
+            }
+            .c6{
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 15px;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 15px;
+            background-color: #EECE88; 
+            }
+        </style>
+
+        <script language="Javascript">
+            /*Operaciones aritmeticas con salida en controles*/
+
+            function sumar(){
+                n1 = document.f1.num1.value
+                n2 = document.f1.num2.value
+
+                sum = parseFloat(n1) + parseFloat(n2)
+
+                document.f1.res1.value = sum.toFixed(2)
+            }
+            function resta(){
+                n1 = document.f1.n1.value
+                n2 = document.f1.n2.value
+
+                res= parseFloat(n1) - parseFloat(n2)
+
+                document.f1.res2.value = res.toFixed(2)
+            }
+            function multi(){
+                n1 = document.f1.n1.value
+                n2 = document.f1.n2.value
+
+                mul= parseFloat(n1) * parseFloat(n2)
+
+                document.f1.res3.value = mul.toFixed(2)
+            }
+            function divis(){
+                n1 = document.f1.n1.value
+                n2 = document.f1.n2.value
+
+                div= parseFloat(n1) / parseFloat(n2)
+
+                document.f1.res4.value = div.toFixed(2)
+            }
+            
+        </script>
+
+    </head>
+    <body>
+        <center><br><br><br><br><br>
+        <form name="f1">
+            <table width=1000px class="table2" name= "table" cellspacing=0 bordercolor=#F1C83A border=0>
+                <tr height=10px>
+                    <th colspan="3"></th>
+                </tr>
+                <tr height=60px>
+                    <th colspan="2" width=500px><font size=5> -- INGRESE DOS NÚMEROS -- </font></th>
+                </tr>
+                <tr height=20px>
+                    <th width=500px>Numero 1</th>
+                    <th width=500px>Numero 2</th>
+                </tr>
+                <tr height=40px>
+                    <th width=500px><input type="text" name="num1"></th>
+                    <th width=500px><input type="text" name="num2"></th>
+                </tr>
+                <tr height=30px>
+                    <th colspan="2" width=500px></th>
+                </tr>
+                <tr height=60px>
+                    <th class=tit width=250px><font size=5>Operación</font></th>
+                    <th class=tit width=250px><font size=5>Resultado</font></th>
+                </tr>
+                <tr height=10px>
+                    <th colspan="2"></th>
+                </tr>
+                <tr height=50px>
+                    <th class=c1><font size=4>Suma</font></th>
+                    <th class=c3><font size=4> <input type="text" size="10" name="res1"> </font></th>
+                </tr>
+                <tr height=50px>
+                    <th class=c4><font size=4>Resta</font></th>
+                    <th class=c6><font size=4> <input type="text" size="10" name="res1"> </font></th>
+                </tr>
+                <tr height=50px>
+                    <th class=c1><font size=4>Multiplicación</font></th>
+                    <th class=c3><font size=4> <input type="text" size="10" name="res1"> </font></th>
+                </tr>
+                <tr height=50px>
+                    <th class=c4><font size=4>División</font></th>
+                    <th class=c6><font size=4> <input type="text" size="10" name="res1"> </font></th>
+                </tr>
+                <tr height=10px>
+                    <th colspan="3"></th>
+                </tr>
+                <tr height=40px>
+                    <th width=500px> <input type="button" value="calcular" onclick="sumar(); resta(); multi(); divis()"> </th>
+                    <th width=500px><input type="reset" name="borrar"></th>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

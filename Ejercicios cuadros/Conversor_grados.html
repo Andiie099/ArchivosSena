@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Conversor Grados</title>
+
+        <style>
+            body{
+                background-color: #D4F1F4;
+            }
+            .tabla{
+                border-radius: 15px;
+                text-decoration: none;
+                padding: 10px;
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+                border-bottom-right-radius: 15px;
+                border-bottom-right-radius: 15px;
+            }
+            .num{
+                border-radius: 10px;
+                text-align: center;
+                width: 100px;
+                height: 25px; 
+                background-color: #60BEEB;
+                font-size: 100%;
+            }
+            .button{
+                text-decoration: none;
+                padding: 5px;
+                font-weight: 80;
+                font-size: 15px;
+                color: white;
+                background-color: #000C66;
+                border-radius: 8px;
+                border: 2px solid #05445E;
+                transition-duration: 0.2s;
+            }
+            .button:hover{
+                background-color: #D4F1F4;
+                color: #05445E;
+            }
+        </style>
+
+        <script language="Javascript">
+
+            function Faren(){
+                n1 = document.form1.cel1.value
+
+                if(n1==''){
+                    document.form1.cel2.value = (' ')    
+                }
+                else{
+                faren = (n1*9/5)+32
+                
+                document.form1.cel2.value = faren.toFixed(2)
+                }
+            }
+
+            function Cels(){
+                n2 = document.form1.far1.value
+
+                if(n2==''){
+                    document.form1.far2.value = (' ')    
+                }
+                else{
+                    cels = (n2-32)*5/9
+
+                document.form1.far2.value = cels.toFixed(2)
+                }
+            }
+
+        </script>
+    </head>
+    <body>
+        <center><br><br><br><br><br><br><form name="form1"> <font size="5" face=Helvetica color=white> 
+            <table border="0" cellspacing="0" width=800px bgcolor=#0000D1 class="tabla">
+                <tr height=50px bgcolor=#8A8AFF>
+                    <th width=50px colspan="5"> <font size="6" face=Helvetica> CONVERSORES </font> </th>
+                </tr>
+                <tr height=60px>
+                    <th width=50px></th>
+                    <th width=300px></th>
+                    <th width=100px></th>
+                    <th width=300px></th>
+                    <th width=50px></th>
+                </tr>
+                <tr height=40px>
+                    <th></th>
+                    <th> Grados Celsius </th>
+                    <th></th>
+                    <th> Grados Farenheit </th>
+                    <th></th>
+                </tr>
+                <tr height=40px>
+                    <th></th>
+                    <th> <input type="number" name="cel1" class="num"> </th>
+                    <th> > </th>
+                    <th> <input type="number" name="cel2" class="num"> </th>
+                    <th></th>
+                </tr>
+                <tr height=40px>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr height=40px>
+                    <th></th>
+                    <th> Grados Farenheit </th>
+                    <th></th>
+                    <th> Grados Celsius </th>
+                    <th></th>
+                </tr>
+                <tr height=40px>
+                    <th></th>
+                    <th> <input type="number" name="far1" class="num"> </th>
+                    <th> > </th>
+                    <th> <input type="number" name="far2" class="num"> </th>
+                    <th></th>
+                </tr>
+                <tr height=40px>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr height=40px>
+                    <th></th>
+                    <th> <input type="button" name="calc" class="button" value="Calcular" onclick="Faren();Cels()"> </th>
+                    <th></th>
+                    <th> <input type="reset" name="reset" class="button"> </th>
+                    <th></th>
+                </tr>
+            </table></font></form>
+    </body>
+</html>

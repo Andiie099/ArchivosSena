@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Funciones_1</title>
+
+        <script language="Javascript">
+            function sumar(){
+                n1 = document.f1.n1.value
+                n2 = document.f1.n2.value
+
+                sum= parseFloat(n1) + parseFloat(n2)
+
+                document.f1.res1.value = sum.toFixed(2)
+            }
+            function resta(){
+                n1 = document.f1.n1.value
+                n2 = document.f1.n2.value
+
+                res= parseFloat(n1) - parseFloat(n2)
+
+                document.f1.res2.value = res.toFixed(2)
+            }
+            function multi(){
+                n1 = document.f1.n1.value
+                n2 = document.f1.n2.value
+
+                mul= parseFloat(n1) * parseFloat(n2)
+
+                document.f1.res3.value = mul.toFixed(2)
+            }
+            function divis(){
+                n1 = document.f1.n1.value
+                n2 = document.f1.n2.value
+
+                div= parseFloat(n1) / parseFloat(n2)
+
+                document.f1.res4.value = div.toFixed(2)
+            }
+        </script>
+    </head>
+    <body>
+        <center><font face=helvetica color=blue size=4><br><br><br><br>
+            <form name=f1>
+                Numero 1 <br>
+                <input type="text" size="10" name="n1"><br><br>
+                Numero 2 <br>
+                <input type="text" size="10" name="n2"><br><br>
+                Suma <br>
+                <input type="text" size="10" name="res1"><br><br>
+                Resta <br>
+                <input type="text" size="10" name="res2"><br><br>
+                Multiplicación <br>
+                <input type="text" size="10" name="res3"><br><br>
+                División <br>
+                <input type="text" size="10" name="res4"><br><br>
+
+                <input type="button" value="calcular" onclick="sumar(); resta(); multi(); divis()"><br><br>
+            </form>
+        
+    </body>
+</html>
